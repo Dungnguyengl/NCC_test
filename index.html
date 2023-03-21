@@ -13,24 +13,29 @@
 </head>
 
 <body>
-    <div class="sidebar">
-        <ul>
-            <li class="item active">
-                <div>Home</div>
-            </li>
-            <li class="item">
-                <div>Services</div>
-            </li>
-            <li class="item">
-                <div>News</div>
-            </li>
-            <li class="item">
-                <div>Blog</div>
-            </li>
-            <li class="item">
-                <div>Contact</div>
-            </li>
-        </ul>
+    <div class="menu">
+        <div class="btn" id="menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li class="item active">
+                    <div>Home</div>
+                </li>
+                <li class="item">
+                    <div>Services</div>
+                </li>
+                <li class="item">
+                    <div>News</div>
+                </li>
+                <li class="item">
+                    <div>Blog</div>
+                </li>
+                <li class="item">
+                    <div>Contact</div>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="main">
         <header> </header>
@@ -69,6 +74,15 @@
             <span class="copyright">Copyright © 2021</span>
         </footer>
     </div>
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            var sidebar = document.getElementById('sidebar')
+            if (sidebar.style.display === 'block')
+                sidebar.style.display = 'none'
+            else
+                sidebar.style.display = 'block'
+        })
+    </script>
 </body>
 
 </html>
